@@ -1,69 +1,98 @@
-*{
-    margin: 0;
+*,
+*:before,
+*:after{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: black;
+    background-color: cadetblue;
     color: white;
     display: flex;
-}
-
-.main-container {
-    width: 90vw;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
-.header {
-    padding: 0.5rem;
-    display: flex;
-    background-color: cadetblue;
-    margin: 1rem;
-    border-radius: 10px;
-}
-
-.header > h1{
-    margin: auto;
-    font-size: 1.8rem;
-}
-
-.main-container-title-text {
-    margin: 1rem auto;
+    justify-content: center;
+    height: 100vh;
 }
 
 .app-container {
-    padding: 0.5rem;
+    width: 40vw;
+    height: fit-content;
     display: flex;
-    background-color: cadetblue;
-    margin: 0 1rem;
-    border-radius: 10px;
     flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    min-width: 500px;
+    min-height: 600px;
+    margin: auto;
+}
+
+.input-container {
+    padding: 30px;
+    width: 100%;
+    display: flex;
     justify-content: center;
 }
 
-.input {
-    height: 1.5rem;
+.input{
+    width: 70%;
+    height: 30px;
+    padding: 10px;
+    color: #111111;
     border-radius: 5px;
-    width: 80%;
-    margin: 0 10px;
-    outline: none;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 2px solid blueviolet;
+    border: 2px solid cadetblue;
 }
 
-.input-container-add-button {
-    height: 1.5rem;
-    border-radius: 5px;
-    margin: 0 10px;
+.input:focus {
     outline: none;
+    border-color: black;
 }
 
-.input:focus{
+.button {
+    height: 30px;
+    width: 40px;
+    color: #111111;
+    border-radius: 5px;
+    background-color: cadetblue;
+    border: none;
+    margin:  0 2%;
+    cursor: pointer;
+}
+
+.button:focus {
+    border: 2px solid black;
+}
+
+.todo-container {
+    min-width: 50px;
+    width: 100%;
+    padding: 30px 20px;
+    margin-top: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+    border: 1px solid cadetblue;
+    cursor: pointer;
+    background-color: rgb(150, 150, 150);
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+
+.delete-button {
+    background-color: cadetblue;
+    border: none;
+    cursor: pointer;
     outline: none;
-    border-color: #0d75ec;
+    height: 30px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.delete-button:focus {
+    border: 2px solid black;
 }
