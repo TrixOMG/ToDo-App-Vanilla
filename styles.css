@@ -77,10 +77,11 @@ body {
     justify-content: space-between;
     border: 1px solid cadetblue;
     cursor: pointer;
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(190, 190, 190);
     height: 30px;
     margin-bottom: 10px;
-    padding: 5px 10px;
+    padding: 20px 10px;
+		color: black;
 }
 
 .delete-button {
@@ -95,4 +96,9 @@ body {
 
 .delete-button:focus {
     border: 2px solid black;
+}
+
+.header-one {
+	color: cadetblue;
+	padding-top: 10px;
 }
