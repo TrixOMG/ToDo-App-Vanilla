@@ -2,11 +2,10 @@ let addButton = document.getElementById("add-button");
 let input = document.getElementById("input");
 let todoContainer = document.getElementById("todo-container");
 
-//let regExp = new RegExp(/\s/g);
+let regExp = new RegExp(/\w/g);
 
 addButton.onclick = () => {
-	if (input.value.length == 0) {
-		//regExp.test(input.value)) {
+	if (input.value.length == 0 || !regExp.test(input.value)) {
 		alert("Please type your Task");
 	} else {
 		todoContainer.innerHTML += `
