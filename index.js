@@ -1,4 +1,5 @@
 let addButton = document.getElementById("add-button");
+let clearButton = document.getElementById("clear-button");
 let input = document.getElementById("input");
 let todoContainer = document.getElementById("todo-container");
 
@@ -18,6 +19,7 @@ addButton.onclick = () => {
             </button>
         </div>
     `;
+		localStorage.setItem("todos", JSON.stringify(todoContainer.innerHTML));
 	}
 
 	let tasks = document.querySelectorAll(".delete-button");
@@ -28,3 +30,10 @@ addButton.onclick = () => {
 		};
 	}
 };
+
+clearButton.onclick = () => {
+	localStorage.clear();
+	console.log("clear");
+};
+
+todoContainer.innerHTML = JSON.parse(localStorage.getItem("todos"));
